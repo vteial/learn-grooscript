@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Initial static web page</title>
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/grooscript-all.js"></script>
+    <script type="text/javascript" src="js/app/Presenter.js"></script>
+</head>
+<body>
+    <p>Name:<input type="text" id="name"/></p>
+    <input type="button" id="button" value="Say hello!"/>
+    <div id="salutes"/>
+    <script type="text/javascript">
+        presenter = Presenter();
+        var binder = Binder();
+        $(document).ready(function() {
+            binder.call(presenter);
+            console.log('All binds done.');
+        });
+    </script>
+</body>
